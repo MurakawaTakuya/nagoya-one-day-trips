@@ -107,8 +107,8 @@
               <div class="card-body">
                 <h3 class="h5 card-title">Map Symbols</h3>
                 <p class="card-text mb-2"><span class="badge text-bg-primary">Marker</span> Sightseeing place</p>
-                <p class="card-text mb-2"><span class="badge text-bg-info">Circle</span> Area around Nagoya Station</p>
-                <p class="card-text mb-0"><span class="badge text-bg-success">Polygon</span> Osu walking area</p>
+                <p class="card-text mb-2"><span class="badge text-bg-info">Circle</span> <span id="circleDescription">Area around Nagoya Station</span></p>
+                <p class="card-text mb-0"><span class="badge text-bg-success">Polygon</span> <span id="polygonDescription">Osu walking area</span></p>
               </div>
             </div>
           </div>
@@ -244,6 +244,8 @@
         document.getElementById("summaryHours").textContent = trip.hours;
         document.getElementById("summaryTransport").textContent = trip.transport;
         document.getElementById("routeTitle").textContent = trip.title;
+        document.getElementById("circleDescription").textContent = trip.circle.popup;
+        document.getElementById("polygonDescription").textContent = trip.polygon.popup;
 
         document.getElementById("routeList").innerHTML = trip.places
           .map(function (place, index) {
