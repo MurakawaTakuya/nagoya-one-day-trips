@@ -1,0 +1,16 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 1rem;
+}
+
+#map {
+  width: 100%;
+  height: 560px;
+}
+
+.place-button {
+  text-align: left;
+}
